@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Manager</title>
+</head>
+<body>
+    <h1>Gestion des élèves</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <h2>Liste des élèves</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.age }} ans</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
